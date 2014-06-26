@@ -50,5 +50,4 @@ ln -sf dotfiles/.emacs.d .
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
 
 #install rvm
-#\curl -sSL https://get.rvm.io | bash -s stable --ruby
 \curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
