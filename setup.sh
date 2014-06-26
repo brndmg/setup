@@ -46,3 +46,9 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+#install bash git prompt
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
+
+#install rvm
+#\curl -sSL https://get.rvm.io | bash -s stable --ruby
+\curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
