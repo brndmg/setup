@@ -47,7 +47,13 @@ ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
 #install bash git prompt
-git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
+if [ ! -d ~/.bash-git-prompt/ ]; then
+    git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
+fi
+
+if [ ! -f ~/.git-completion.bash ]; then
+    wget -O .git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+fi 
 
 #install rvm
 \curl -sSL https://get.rvm.io | bash -s stable --ruby -- --ignore-dotfiles
